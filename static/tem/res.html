@@ -1,0 +1,24 @@
+
+<div class="container">
+    <!-- show success -->
+    <div class="box-success"
+         ng-show="pageData.resInfo.success">
+        <img src="../img/success.png" />
+        <p>{{ pageData.resInfo.msg }}</p>
+    </div>
+
+    <!-- show error -->
+    <div class="box-error"
+         ng-hide="pageData.resInfo.success">
+        <img src="../img/error.png" />
+        <p>{{ pageData.resInfo.msg }}</p>
+    </div>
+
+
+    <!-- button -->
+    <div class="btn-close" ng-click="close()">关闭</div>
+    <div class="btn-submit" ng-click="submit()"
+         ng-hide="pageData.resInfo.success">重试</div>
+</div>
+
+

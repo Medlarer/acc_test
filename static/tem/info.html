@@ -1,0 +1,37 @@
+
+<div class="box-featureCode"
+     ng-hide="pageData.formInfo.featureCode">特征码缺失！</div>
+
+<div class="container">
+    <div class="title">请填写以下信息：</div>
+
+    <div class="box-form">
+        <input type="text" placeholder="公司名称" maxlength="30"
+               ng-change="hidePromptSize()"
+               ng-model="pageData.formInfo.coName" />
+
+        <input type="text" placeholder="姓名" maxlength="30"
+               ng-change="hidePromptSize()"
+               ng-model="pageData.formInfo.userName" />
+
+        <input type="text" placeholder="职务" maxlength="30"
+               ng-change="hidePromptSize()"
+               ng-model="pageData.formInfo.jobType" />
+
+        <input type="text" placeholder="联系电话" maxlength="11"
+               ng-change="hidePromptSize()"
+               ng-model="pageData.formInfo.tel" />
+
+        <input type="text" placeholder="邮箱" maxlength="30"
+               ng-change="hidePromptSize()"
+               ng-model="pageData.formInfo.email" />
+    </div>
+
+    <div class="prompt-size">
+        <p ng-show="pageData.promptSize">
+            * {{ pageData.promptSize }}
+        </p>
+    </div>
+
+    <div class="btn-submit" ng-click="submit()">提交</div>
+</div>

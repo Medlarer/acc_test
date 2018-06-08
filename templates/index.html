@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="myApp"
+      ng-controller="appCtrl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <title ng-bind="pageData.title"></title>
+
+    <link rel="stylesheet" href="/static/css/common.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+
+<body>
+
+<!-- form -->
+<div class="box-info" ng-show="!pageData.showRes"
+     ng-include="'/static/tem/info.html'"></div>
+
+<!-- res -->
+<div class="box-res" ng-hide="!pageData.showRes"
+     ng-include="'/static/tem/res.html'"></div>
+
+<!-- pop-loading -->
+<div class="pop-loading" ng-show="pageData.showLoading"
+     ng-include="'/static/tem/loading.html'"></div>
+
+<!-- pop-mask -->
+<div class="pop-mask" ng-show="pageData.showLoading"></div>
+
+
+
+
+
+
+<!-- js -->
+<script src="static/js/angular.min.js"></script>
+<script src="static/js/app.ctrl.js"></script>
+
+</body>
+</html>
